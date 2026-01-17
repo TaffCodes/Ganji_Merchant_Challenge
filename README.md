@@ -28,7 +28,7 @@ Ganji Merchant DB is a lightweight, localized Relational Database Management Sys
 ---
 
 ### Project Structure
-
+```
 Ganji_Merchant_DB/
 ├── src/
 │   ├── engine.py           # Core database logic (Storage, Parsing, Indexing)
@@ -38,7 +38,7 @@ Ganji_Merchant_DB/
 │   └── ganji_ledger.json   # Persistent storage file (Auto-generated)
 ├── requirements.txt        # Project dependencies
 └── README.md               # Documentation
-
+```
 ---
 
 ### Installation
