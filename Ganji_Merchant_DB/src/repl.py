@@ -8,7 +8,6 @@ def start_repl():
     print("==========================================")
     
     # Initialize Database
-    # We don't need to load here, because we load inside the loop now.
     db = Database()
     
     print("System loaded. Type 'EXIT' to quit.")

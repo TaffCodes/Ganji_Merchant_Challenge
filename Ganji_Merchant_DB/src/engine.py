@@ -86,11 +86,7 @@ class Database:
     def __init__(self, location=None):
         self.tables = {}
         
-        # === THE FIX: ANCHOR THE PATH ===
-        # 1. Get the path of THIS file (engine.py)
-        # 2. Go up one level (parent) to get out of 'src'
-        # 3. Go into 'data' -> 'ganji_ledger.json'
-        
+              
         base_dir = Path(__file__).resolve().parent.parent
         self.location = base_dir / "data" / "ganji_ledger.json"
         
