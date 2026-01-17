@@ -80,11 +80,11 @@ Ganji_Merchant_DB/
     python src/app.py
     ```
 
-    Open your web browser to: http://127.0.0.1:5000
+Open your web browser to: http://127.0.0.1:5000
 
-    Click "Reset & Initialize Database System" to create the necessary tables.
+Click "Reset & Initialize Database System" to create the necessary tables.
 
-    Use the form to record transactions and view the ledger.
+Use the form to record transactions and view the ledger.
 
 #### 2. The CLI REPL (Admin View)
     To interact directly with the database engine using SQL commands:
