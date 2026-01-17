@@ -1,4 +1,21 @@
 {
+    "users": {
+        "columns": {
+            "name": "str",
+            "email": "str"
+        },
+        "pk": "name",
+        "rows": [
+            {
+                "name": "John_Kamau",
+                "email": "john@gmail.com"
+            },
+            {
+                "name": "Alice_Wambui",
+                "email": "alice@yahoo.com"
+            }
+        ]
+    },
     "sales": {
         "columns": {
             "id": "int",
@@ -19,41 +36,6 @@
                 "customer": "Alice_Wambui",
                 "amount": 4500.0,
                 "method": "CARD"
-            },
-            {
-                "id": 2394,
-                "customer": "Barasa_Nyambane",
-                "amount": 20.0,
-                "method": "CARD"
-            },
-            {
-                "id": 6980,
-                "customer": "Barasa_999",
-                "amount": 456765.88,
-                "method": "M-PESA"
-            },
-            {
-                "id": 5019,
-                "customer": "Barasa_Nyambane",
-                "amount": 555.0,
-                "method": "CARD"
-            }
-        ]
-    },
-    "users": {
-        "columns": {
-            "name": "str",
-            "email": "str"
-        },
-        "pk": "name",
-        "rows": [
-            {
-                "name": "John_Kamau",
-                "email": "john@gmail.com"
-            },
-            {
-                "name": "Alice_Wambui",
-                "email": "alice@yahoo.com"
             }
         ]
     }
