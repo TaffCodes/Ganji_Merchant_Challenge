@@ -37,6 +37,7 @@ Ganji_Merchant_DB/
 ├── data/
 │   └── ganji_ledger.json   # Persistent storage file (Auto-generated)
 ├── requirements.txt        # Project dependencies
+├── .gitignore
 └── README.md               # Documentation
 ```
 ---
@@ -92,9 +93,9 @@ To interact directly with the database engine using SQL commands:
     ```bash
     python src/repl.py
     ```
-Type EXIT to close the session.
+Type ```EXIT``` to close the session.
 
-Supported SQL Syntax
+#### Supported SQL Syntax
 The custom parser supports the following commands:
 
 1. **Create Table Defines a new table with typed columns and an optional Primary Key (PK).**

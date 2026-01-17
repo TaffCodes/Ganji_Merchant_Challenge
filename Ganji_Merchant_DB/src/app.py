@@ -177,6 +177,7 @@ def setup():
     try:
         if "sales" in db.tables: del db.tables["sales"]
         db.execute_query("CREATE TABLE sales (id int, customer str, amount float, method str) PK id")
+        db.execute_query("CREATE TABLE users (name str, email str) PK name")
         db.execute_query("INSERT INTO sales VALUES (1001, John_Kamau, 1500.50, M-PESA)")
         db.execute_query("INSERT INTO sales VALUES (1002, Alice_Wambui, 4500.00, CARD)")
         db.save_to_disk()
