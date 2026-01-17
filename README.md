@@ -97,7 +97,7 @@ Ganji_Merchant_DB/
     Supported SQL Syntax
     The custom parser supports the following commands:
 
-    1. Create Table Defines a new table with typed columns and an optional Primary Key (PK).
+    1. **Create Table Defines a new table with typed columns and an optional Primary Key (PK).**
 
     ```SQL
 
