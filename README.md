@@ -136,9 +136,9 @@ The custom parser supports the following commands:
 
 7. **System Commands**
 
-    SAVE: Forces a write operation to the JSON file on disk.
+    **SAVE:** Forces a write operation to the JSON file on disk.
 
-    EXIT: Closes the REPL.
+    **EXIT:** Closes the REPL.
 
 #### Architecture Design Decisions
 ### Storage (JSON)
