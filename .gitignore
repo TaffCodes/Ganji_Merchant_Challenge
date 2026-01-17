@@ -1,0 +1,27 @@
+# Compiled python modules (Auto-generated)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environments ---
+# Keeps your heavy library files out of the repo
+venv/
+env/
+.venv/
+
+# --- Operating System Files ---
+# Mac system files
+.DS_Store
+# Windows thumbnail database
+Thumbs.db
+
+# --- Database Storage ---
+# We ignore the actual database file because:
+# 1. It is created/reset automatically by the App's "Reset" button.
+# 2. It changes constantly during testing.
+# 3. It prevents merge conflicts if you work on different computers.
+data/ganji_ledger.json
+
+# --- Editor/IDE Settings (Optional) ---
+.vscode/
+.idea/
