@@ -159,7 +159,7 @@ Decision: Implemented a Nested Loop Join algorithm.
 Reasoning: While O(N*M) in complexity, it is the most straightforward implementation of Relational Algebra for a custom engine, demonstrating the fundamental logic of data combination.
 
 ### Credits
-Author: [Your Name]
+Author: Ray Basweti w/ Gemini
 
 Frameworks: Flask (Used for the Web Interface layer only).
 
