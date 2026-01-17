@@ -75,7 +75,7 @@ Ganji_Merchant_DB/
 ### Usage
 
 #### 1. The Web Interface (Merchant View)
-    To launch the Merchant Portal:
+To launch the Merchant Portal:
     ```bash
     python src/app.py
     ```
@@ -87,53 +87,54 @@ Click "Reset & Initialize Database System" to create the necessary tables.
 Use the form to record transactions and view the ledger.
 
 #### 2. The CLI REPL (Admin View)
-    To interact directly with the database engine using SQL commands:
+To interact directly with the database engine using SQL commands:
 
     ```bash
     python src/repl.py
     ```
-    Type EXIT to close the session.
+Type EXIT to close the session.
 
-    Supported SQL Syntax
-    The custom parser supports the following commands:
+Supported SQL Syntax
+The custom parser supports the following commands:
 
-    1. **Create Table Defines a new table with typed columns and an optional Primary Key (PK).**
+1. **Create Table Defines a new table with typed columns and an optional Primary Key (PK).**
 
     ```SQL
 
     CREATE TABLE users (id int, name str, role str) PK id
     ```
-    2. Insert Data Adds a new row. The parser validates data types against the schema.
+2. **Insert Data Adds a new row. The parser validates data types against the schema.**
 
     ```SQL
 
     INSERT INTO users VALUES (101, Alice, Admin)
     ```
-    3. Select Data Retrieves all rows from a table.
+3. **Select Data Retrieves all rows from a table.**
 
     ```SQL
 
     SELECT * FROM users
     ```
-    4. Update Data Updates a specific column for a row identified by the Primary Key.
+4. **Update Data Updates a specific column for a row identified by the Primary Key.**
 
     ```SQL
 
     UPDATE users SET role = Manager WHERE id = 101
     ```
-    5. Delete Data Removes a row identified by the Primary Key.
+5. **Delete Data Removes a row identified by the Primary Key.**
 
     ```SQL
 
     DELETE FROM users WHERE id = 101
     ```
-    6. Join Tables Performs an Inner Join between two tables based on a common key.
+6. **Join Tables Performs an Inner Join between two tables based on a common key.**
 
     ```SQL
 
     SELECT * FROM users JOIN orders ON id = user_id
     ```
-    7. System Commands
+
+7. **System Commands**
 
     SAVE: Forces a write operation to the JSON file on disk.
 
@@ -142,25 +143,25 @@ Use the form to record transactions and view the ledger.
 #### Architecture Design Decisions
 ### Storage (JSON)
 
-Decision: Used JSON for serialization instead of binary files.
+**Decision:** Used JSON for serialization instead of binary files.
 
-Reasoning: JSON is human-readable, making it easier to debug and verify data persistence during development.
+**Reasoning:** JSON is human-readable, making it easier to debug and verify data persistence during development.
 
 ### Indexing (Python Sets)
 
-Decision: Used Python's internal Set data structure for Primary Keys.
+**Decision:** Used Python's internal Set data structure for Primary Keys.
 
-Reasoning: Sets provide O(1) average time complexity for lookups. This allows the system to instantly reject duplicate IDs without scanning the entire table.
+**Reasoning:** Sets provide O(1) average time complexity for lookups. This allows the system to instantly reject duplicate IDs without scanning the entire table.
 
 ### Joins (Nested Loop)
 
-Decision: Implemented a Nested Loop Join algorithm.
+**Decision:** Implemented a Nested Loop Join algorithm.
 
-Reasoning: While O(N*M) in complexity, it is the most straightforward implementation of Relational Algebra for a custom engine, demonstrating the fundamental logic of data combination.
+**Reasoning:** While O(N*M) in complexity, it is the most straightforward implementation of Relational Algebra for a custom engine, demonstrating the fundamental logic of data combination.
 
 ### Credits
-Author: Ray Basweti w/ Gemini
+**Author:** Ray Basweti w/ Gemini
 
-Frameworks: Flask (Used for the Web Interface layer only).
+**Frameworks:** Flask (Used for the Web Interface layer only).
 
-Inspiration: Pesapal's mission to provide seamless payment solutions for businesses.
+**Inspiration:** Pesapal's mission to provide seamless payment solutions for businesses.
